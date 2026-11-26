@@ -402,7 +402,7 @@ Bug nhỏ thấy được: trường `turn` bị lệch 1 (request đầu tiên 
 
 ## Part 6: Final Project
 
-Code trong `06-lab-complete/`. Output `python check_production_ready.py` (chạy đầy đủ, có Docker, ngày 2026-11-26):
+Code trong `06-lab-complete/`. Output `python check_production_ready.py --public-url https://agent-production-bfae1a95.up.railway.app` (chạy đầy đủ, có Docker, sau khi deploy Railway, ngày 2026-11-26):
 
 ```text
 ================================================================
@@ -420,7 +420,7 @@ Code trong `06-lab-complete/`. Output `python check_production_ready.py` (chạy
      ✅ Graceful shutdown
      ✅ Public URL ready (Railway / Render config)
 ----------------------------------------------------------------
-  Result: 12/12 tiêu chí đạt · 43/43 checks passed
+  Result: 12/12 tiêu chí đạt · 44/44 checks passed
   🎉 PASS 12/12 — PRODUCTION READY! Deploy nào!
 ================================================================
 ```
