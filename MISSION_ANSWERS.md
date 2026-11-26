@@ -132,8 +132,13 @@ $ curl -X POST http://localhost/ask -H "Content-Type: application/json" -d '{"qu
 
 ### Exercise 3.1 / 3.2: Deploy agent Part 6
 
-- URL: _(chưa deploy — cần đăng nhập Railway/Render; điền sau CP6)_
+Nền tảng chính: **Railway** (Exercise 3.1). Deploy chính agent Part 6 (`06-lab-complete/`) kèm một Redis trên Railway; chi tiết trong [DEPLOYMENT.md](DEPLOYMENT.md).
+
+- URL: https://agent-production-bfae1a95.up.railway.app
+- Kết quả 4 lệnh tự kiểm ở CP6: `/health` **200**, `/ready` **200** (`{"status":"ready","redis":"ok"}`), `/ask` không key **401**, `/ask` có key **200**. Rate limit trên cloud: request thứ 10 trong 60 s trả **429** (`retry-after: 44`).
+- Biến môi trường đặt trên Railway: `AGENT_API_KEY` (ngẫu nhiên, không ghi trong repo), `REDIS_URL=${{Redis.REDIS_URL}}`, `ENVIRONMENT=production`, `RATE_LIMIT_PER_MINUTE=10`, `DAILY_BUDGET_USD=1.0`, `MONTHLY_BUDGET_USD=10.0`, `LOG_LEVEL=INFO`.
 - Screenshot: `screenshots/dashboard.png`, `screenshots/running.png`, `screenshots/test.png`
+- Ghi chú: Railway CLI 5.75 cảnh báo `railway.toml` (Config as Code) đã bị deprecate, còn chạy tới 2026-12-01; bản mới khuyến nghị Infrastructure as Code (`.railway/railway.ts`). Bài vẫn giữ `railway.toml` vì script chấm yêu cầu.
 
 ### So sánh `railway.toml` với `render.yaml`
 

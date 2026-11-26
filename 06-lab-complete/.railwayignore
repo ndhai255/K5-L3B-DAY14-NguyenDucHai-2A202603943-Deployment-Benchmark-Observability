@@ -1,0 +1,9 @@
+# Không upload lên Railway khi chạy `railway up` (.dockerignore chỉ áp dụng lúc build image)
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+venv/
+.venv/
+benchmark-observability/
