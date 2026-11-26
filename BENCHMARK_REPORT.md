@@ -2,7 +2,7 @@
 
 > Mọi con số dưới đây lấy từ file đã nộp: `reports/*.json` (load test, eval), `benchmark-results/*.csv` (Locust), Prometheus / Jaeger API và log của agent trong lần chạy ngày 2026-11-26.
 
-**Họ tên:** Nguyen Duc Hai
+**Họ tên:** Nguyễn Đức Hải
 **Ngày chạy:** 2026-11-26
 **Môi trường:** Laptop Linux (Intel Core i5-12500H, 16 luồng CPU, 14 GB RAM), Docker 29.1.3, Python 3.11. Load test chạy trên cùng máy với agent. Mỗi container agent bị giới hạn `cpus: 0.5`, `memory: 256M` (theo `docker-compose.yml`).
 
